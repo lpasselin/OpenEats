@@ -96,6 +96,8 @@ INSTALLED_APPS = (
 
     'imagekit',
     'django_extensions',
+
+    'rest_framework_docs',
 )
 
 # Password validation
