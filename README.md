@@ -42,6 +42,7 @@ If you want to add some test data we can load a few recipes and some news data. 
 That should be it! you can run the dev server now to load up the api `./manage runserver`.
 
 Load up `http://localhost:8000/api/v1/recipe/` in a browser and see the results.
+REST API docs will be at `http://localhost:8000/docs/`
 
 
 The next thing we need to do is setup react. From your base dir:
