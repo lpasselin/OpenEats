@@ -20,7 +20,6 @@ class GroceryItemSerializer(serializers.ModelSerializer):
     """used to create a new grocery list for a user"""
     class Meta:
         model = GroceryItem
-        exclude = ('slug',)
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)  # get the user passed to the form off of the keyword argument
