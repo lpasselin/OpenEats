@@ -2,22 +2,16 @@
 # encoding: utf-8
 from __future__ import unicode_literals
 
-from django.conf.urls import url, include
-from rest_framework.routers import DefaultRouter
 from . import views
 
 # Create a router and register our viewsets with it.
-router = DefaultRouter(schema_title='Grocery List')
-router.register(r'list', views.GroceryListViewSet)
-router.register(r'shared', views.GrocerySharedViewSet)
-router.register(r'aisle', views.GroceryAisleViewSet)
-router.register(r'recipe', views.GroceryRecipeViewSet)
-router.register(r'item', views.GroceryItemViewSet)
-
-urlpatterns = [
-    url(r'^', include(router.urls)),
-]
-
+routeList = (
+    (r'list/list', views.GroceryListViewSet),
+    (r'list/shared', views.GrocerySharedViewSet),
+    (r'list/aisle', views.GroceryAisleViewSet),
+    (r'list/recipe', views.GroceryRecipeViewSet),
+    (r'list/item', views.GroceryItemViewSet),
+)
 
 '''
 urlpatterns = (
